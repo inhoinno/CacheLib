@@ -199,6 +199,12 @@ case "$1" in
     NAME=folly
     SRCDIR=cachelib/external/$NAME
     update_submodules=yes
+    REPO=https://github.com/facebook/folly.git
+    REPODIR=cachelib/external/$NAME
+    SRCDIR=$REPODIR
+    #update_submodules=yes
+    external_git_clone=yes
+    external_git_tag=f949ffbab
     cmake_custom_params="-DBUILD_SHARED_LIBS=ON"
     if test "$build_tests" = "yes" ; then
         cmake_custom_params="$cmake_custom_params -DBUILD_TESTS=ON"
@@ -209,8 +215,12 @@ case "$1" in
 
   fizz)
     NAME=fizz
-    SRCDIR=cachelib/external/$NAME/$NAME
-    update_submodules=yes
+    REPO=https://github.com/facebookincubator/fizz.git
+    REPODIR=cachelib/external/$NAME
+    SRCDIR=$REPODIR/$NAME
+    #update_submodules=yes
+    external_git_clone=yes
+    external_git_tag=9b6b3073
     cmake_custom_params="-DBUILD_SHARED_LIBS=ON"
     if test "$build_tests" = "yes" ; then
         cmake_custom_params="$cmake_custom_params -DBUILD_TESTS=ON"
@@ -221,8 +231,14 @@ case "$1" in
 
   wangle)
     NAME=wangle
-    SRCDIR=cachelib/external/$NAME/$NAME
-    update_submodules=yes
+    #SRCDIR=cachelib/external/$NAME/$NAME
+    #update_submodules=yes
+    REPO=https://github.com/facebook/wangle.git
+    REPODIR=cachelib/external/$NAME
+    SRCDIR=$REPODIR/$NAME
+    #update_submodules=yes
+    external_git_clone=yes
+    external_git_tag=f5a09d0e
     cmake_custom_params="-DBUILD_SHARED_LIBS=ON"
     if test "$build_tests" = "yes" ; then
         cmake_custom_params="$cmake_custom_params -DBUILD_TESTS=ON"
@@ -231,17 +247,33 @@ case "$1" in
     fi
     ;;
 
+#  mvfst)
+#    NAME=mvfst
+#    SRCDIR=cachelib/external/$NAME
+#    update_submodules=yes
+#    cmake_custom_params="-DBUILD_SHARED_LIBS=ON"
+#    ;;
   mvfst)
     NAME=mvfst
-    SRCDIR=cachelib/external/$NAME
-    update_submodules=yes
+    REPO=https://github.com/facebook/mvfst.git
+    REPODIR=cachelib/external/$NAME
+    SRCDIR=$REPODIR
+    #external_git_clone=yes
+    external_git_clone=yes
+    external_git_tag=af568adc
     cmake_custom_params="-DBUILD_SHARED_LIBS=ON"
     ;;
 
   fbthrift)
     NAME=fbthrift
-    SRCDIR=cachelib/external/$NAME
-    update_submodules=yes
+    #SRCDIR=cachelib/external/$NAME
+    #update_submodules=yes
+    REPO=https://github.com/facebook/fbthrift.git
+    REPODIR=cachelib/external/$NAME
+    SRCDIR=$REPODIR
+    #update_submodules=yes+
+    external_git_clone=yes
+    external_git_tag=e7287b3b89
     cmake_custom_params="-DBUILD_SHARED_LIBS=ON"
     ;;
 

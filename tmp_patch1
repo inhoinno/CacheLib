@@ -1,0 +1,181 @@
+diff --git a/.github/workflows/build-cachelib-centos-8-1.yml b/.github/workflows/build-cachelib-centos-8-1.yml
+index 19b642f0..04b529a2 100644
+--- a/.github/workflows/build-cachelib-centos-8-1.yml
++++ b/.github/workflows/build-cachelib-centos-8-1.yml
+@@ -96,6 +96,8 @@ jobs:
+         run: ./contrib/build-package.sh -j -v -i fizz
+       - name: "Install dependency: wangle"
+         run: ./contrib/build-package.sh -j -v -i wangle
++      - name: "Install dependency: mvfst"
++        run: ./contrib/build-package.sh -j -v -i mvfst
+       - name: "Install dependency: fbthrift"
+         run: ./contrib/build-package.sh -j -v -i fbthrift
+       - name: "build CacheLib"
+diff --git a/.github/workflows/build-cachelib-centos-8-5.yml b/.github/workflows/build-cachelib-centos-8-5.yml
+index 14ab8cfa..726afbbc 100644
+--- a/.github/workflows/build-cachelib-centos-8-5.yml
++++ b/.github/workflows/build-cachelib-centos-8-5.yml
+@@ -95,6 +95,8 @@ jobs:
+         run: ./contrib/build-package.sh -j -v -i fizz
+       - name: "Install dependency: wangle"
+         run: ./contrib/build-package.sh -j -v -i wangle
++      - name: "Install dependency: mvfst"
++        run: ./contrib/build-package.sh -j -v -i mvfst
+       - name: "Install dependency: fbthrift"
+         run: ./contrib/build-package.sh -j -v -i fbthrift
+       - name: "build CacheLib"
+diff --git a/.github/workflows/build-cachelib-debian-10.yml b/.github/workflows/build-cachelib-debian-10.yml
+index 484833fa..735a8733 100644
+--- a/.github/workflows/build-cachelib-debian-10.yml
++++ b/.github/workflows/build-cachelib-debian-10.yml
+@@ -77,6 +77,8 @@ jobs:
+         run: ./contrib/build-package.sh -j -v -i fizz
+       - name: "Install dependency: wangle"
+         run: ./contrib/build-package.sh -j -v -i wangle
++      - name: "Install dependency: mvfst"
++        run: ./contrib/build-package.sh -j -v -i mvfst
+       - name: "Install dependency: fbthrift"
+         run: ./contrib/build-package.sh -j -v -i fbthrift
+       - name: "build CacheLib"
+diff --git a/.github/workflows/build-cachelib-fedora-36.yml b/.github/workflows/build-cachelib-fedora-36.yml
+index b9f4372a..f0e994a8 100644
+--- a/.github/workflows/build-cachelib-fedora-36.yml
++++ b/.github/workflows/build-cachelib-fedora-36.yml
+@@ -79,6 +79,8 @@ jobs:
+         run: ./contrib/build-package.sh -j -v -i fizz
+       - name: "Install dependency: wangle"
+         run: ./contrib/build-package.sh -j -v -i wangle
++      - name: "Install dependency: mvfst"
++        run: ./contrib/build-package.sh -j -v -i mvfst
+       - name: "Install dependency: fbthrift"
+         run: ./contrib/build-package.sh -j -v -i fbthrift
+       - name: "build CacheLib"
+diff --git a/.github/workflows/build-cachelib-rockylinux-8.yml b/.github/workflows/build-cachelib-rockylinux-8.yml
+index 17d60883..073e6fbf 100644
+--- a/.github/workflows/build-cachelib-rockylinux-8.yml
++++ b/.github/workflows/build-cachelib-rockylinux-8.yml
+@@ -79,6 +79,8 @@ jobs:
+         run: ./contrib/build-package.sh -j -v -i fizz
+       - name: "Install dependency: wangle"
+         run: ./contrib/build-package.sh -j -v -i wangle
++      - name: "Install dependency: mvfst"
++        run: ./contrib/build-package.sh -j -v -i mvfst
+       - name: "Install dependency: fbthrift"
+         run: ./contrib/build-package.sh -j -v -i fbthrift
+       - name: "build CacheLib"
+diff --git a/.github/workflows/build-cachelib-rockylinux-9.yml b/.github/workflows/build-cachelib-rockylinux-9.yml
+index 23c0218e..aa02c38d 100644
+--- a/.github/workflows/build-cachelib-rockylinux-9.yml
++++ b/.github/workflows/build-cachelib-rockylinux-9.yml
+@@ -80,6 +80,8 @@ jobs:
+         run: ./contrib/build-package.sh -j -v -i fizz
+       - name: "Install dependency: wangle"
+         run: ./contrib/build-package.sh -j -v -i wangle
++      - name: "Install dependency: mvfst"
++        run: ./contrib/build-package.sh -j -v -i mvfst
+       - name: "Install dependency: fbthrift"
+         run: ./contrib/build-package.sh -j -v -i fbthrift
+       - name: "build CacheLib"
+diff --git a/.github/workflows/build-cachelib-ubuntu-18.yml b/.github/workflows/build-cachelib-ubuntu-18.yml
+index a30e366b..f6bb76ce 100644
+--- a/.github/workflows/build-cachelib-ubuntu-18.yml
++++ b/.github/workflows/build-cachelib-ubuntu-18.yml
+@@ -96,6 +96,8 @@ jobs:
+         run: ./contrib/build-package.sh -j -v -i fizz
+       - name: "Install dependency: wangle"
+         run: ./contrib/build-package.sh -j -v -i wangle
++      - name: "Install dependency: mvfst"
++        run: ./contrib/build-package.sh -j -v -i mvfst
+       - name: "Install dependency: fbthrift"
+         run: ./contrib/build-package.sh -j -v -i fbthrift
+       - name: "build CacheLib"
+diff --git a/.github/workflows/build-cachelib-ubuntu-20.yml b/.github/workflows/build-cachelib-ubuntu-20.yml
+index a2623ad8..fb64e7bf 100644
+--- a/.github/workflows/build-cachelib-ubuntu-20.yml
++++ b/.github/workflows/build-cachelib-ubuntu-20.yml
+@@ -75,6 +75,8 @@ jobs:
+         run: ./contrib/build-package.sh -j -v -i fizz
+       - name: "Install dependency: wangle"
+         run: ./contrib/build-package.sh -j -v -i wangle
++      - name: "Install dependency: mvfst"
++        run: ./contrib/build-package.sh -j -v -i mvfst
+       - name: "Install dependency: fbthrift"
+         run: ./contrib/build-package.sh -j -v -i fbthrift
+       - name: "build CacheLib"
+diff --git a/.github/workflows/build-cachelib-ubuntu-22.yml b/.github/workflows/build-cachelib-ubuntu-22.yml
+index 76f197b8..e8c074ae 100644
+--- a/.github/workflows/build-cachelib-ubuntu-22.yml
++++ b/.github/workflows/build-cachelib-ubuntu-22.yml
+@@ -75,6 +75,8 @@ jobs:
+         run: ./contrib/build-package.sh -j -v -i fizz
+       - name: "Install dependency: wangle"
+         run: ./contrib/build-package.sh -j -v -i wangle
++      - name: "Install dependency: mvfst"
++        run: ./contrib/build-package.sh -j -v -i mvfst
+       - name: "Install dependency: fbthrift"
+         run: ./contrib/build-package.sh -j -v -i fbthrift
+       - name: "build CacheLib"
+diff --git a/cachelib/cmake/FindSodium.cmake b/cachelib/cmake/FindSodium.cmake
+index c664ccbe..a7bfe727 100644
+--- a/cachelib/cmake/FindSodium.cmake
++++ b/cachelib/cmake/FindSodium.cmake
+@@ -254,6 +254,9 @@ if(sodium_USE_STATIC_LIBS)
+ else()
+     set(_LIB_TYPE SHARED)
+ endif()
++
++
++if (NOT TARGET sodium)
+ add_library(sodium ${_LIB_TYPE} IMPORTED)
+ 
+ set_target_properties(sodium PROPERTIES
+@@ -292,3 +295,4 @@ else()
+         endif()
+     endif()
+ endif()
++endif()
+diff --git a/contrib/build-package.sh b/contrib/build-package.sh
+index 755933bd..af242fc2 100755
+--- a/contrib/build-package.sh
++++ b/contrib/build-package.sh
+@@ -60,7 +60,7 @@ NAME: the dependency to build supported values are:
+   zstd
+   googlelog, googleflags, googletest,
+   fmt, sparsemap,
+-  folly, fizz, wangle, fbthrift,
++  folly, fizz, wangle, mvfst, fbthrift,
+   cachelib
+ 
+   "
+@@ -231,6 +231,15 @@ case "$1" in
+     fi
+     ;;
+ 
++  mvfst)
++    NAME=mvfst
++    REPO=https://github.com/facebook/mvfst
++    REPODIR=cachelib/external/$NAME
++    SRCDIR=$REPODIR
++    external_git_clone=yes
++    cmake_custom_params="-DBUILD_SHARED_LIBS=ON"
++    ;;
++
+   fbthrift)
+     NAME=fbthrift
+     SRCDIR=cachelib/external/$NAME
+diff --git a/contrib/build.sh b/contrib/build.sh
+index 19dd39c6..2187ab72 100755
+--- a/contrib/build.sh
++++ b/contrib/build.sh
+@@ -89,7 +89,7 @@ build_arch()
+ 
+ build_dependencies()
+ {
+-  for pkg in zstd googleflags googlelog googletest sparsemap fmt folly fizz wangle fbthrift ;
++  for pkg in zstd googleflags googlelog googletest sparsemap fmt folly fizz wangle mvfst fbthrift ;
+   do
+     # shellcheck disable=SC2086
+     ./contrib/build-package.sh $pass_params "$pkg" \
+-- 
+2.34.1
+
